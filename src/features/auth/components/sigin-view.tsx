@@ -1,7 +1,6 @@
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { GitHubLogoIcon } from '@radix-ui/react-icons';
-import { StarIcon } from 'lucide-react';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import UserAuthForm from './user-auth-form';
@@ -26,7 +25,13 @@ export default function SignInViewPage({ stars }: { stars: number }) {
       <div className='relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex'>
         <div className='absolute inset-0 bg-zinc-900' />
         <div className='relative z-20 flex items-center text-lg font-medium'>
-          <img src='/next.svg' alt='DashFlow Logo' className='mr-2 h-6 w-6' />
+          <Image
+            src='/next.svg'
+            alt='DashFlow Logo'
+            width={24}
+            height={24}
+            className='mr-2'
+          />
           <span className='font-bold'>DashFlow</span>
         </div>
         <div className='relative z-20 mt-auto'>
@@ -52,7 +57,7 @@ export default function SignInViewPage({ stars }: { stars: number }) {
           </div>
           <UserAuthForm />
           <p className='px-8 text-center text-sm text-muted-foreground'>
-            Don't have an account?{' '}
+            Don&apos;t have an account?{' '}
             <Link
               href='/signup'
               className='underline underline-offset-4 hover:text-primary'

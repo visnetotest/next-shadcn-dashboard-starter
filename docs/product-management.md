@@ -15,13 +15,13 @@ graph TD
         B --> E[Delete Product]
         F[Product Search] --> A
     end
-    
+
     subgraph Backend
         G[API Routes] --> H[Product Controller]
         H --> I[Data Validation]
         H --> J[Data Storage]
     end
-    
+
     A <--> G
     C <--> G
     D <--> G
@@ -35,13 +35,13 @@ graph TD
     A[ProductsPage] --> B[ProductList]
     A --> C[ProductForm]
     A --> D[ProductFilters]
-    
+
     B --> E[ProductCard]
     B --> F[ProductTable]
-    
+
     C --> G[FormFields]
     C --> H[ImageUpload]
-    
+
     D --> I[SearchInput]
     D --> J[FilterOptions]
 ```
@@ -54,7 +54,7 @@ sequenceDiagram
     participant C as Components
     participant A as API
     participant S as State
-    
+
     U->>C: Interact with UI
     C->>A: Send Request
     A->>S: Update Data
@@ -86,7 +86,7 @@ sequenceDiagram
     participant V as Validation
     participant A as API
     participant D as Database
-    
+
     U->>F: Fill Product Details
     F->>V: Validate Input
     V->>A: Submit Data
@@ -105,7 +105,7 @@ sequenceDiagram
     participant V as Validation
     participant A as API
     participant D as Database
-    
+
     U->>F: Modify Product
     F->>V: Validate Changes
     V->>A: Update Request
@@ -122,9 +122,9 @@ graph TD
     A[Search Input] --> B[Debounce]
     B --> C[Query Builder]
     C --> D[API Request]
-    
+
     E[Filter Selection] --> C
-    
+
     D --> F[Results]
     F --> G[UI Update]
 ```
@@ -134,15 +134,15 @@ graph TD
 ```mermaid
 graph TD
     A[Error Occurs] --> B{Error Type}
-    
+
     B -->|Validation| C[Form Error]
     B -->|API| D[Request Error]
     B -->|Network| E[Connection Error]
-    
+
     C --> F[Error Display]
     D --> F
     E --> F
-    
+
     F --> G[User Notification]
     F --> H[Error Logging]
 ```
@@ -155,7 +155,7 @@ graph TD
     A --> C[Pagination]
     A --> D[Lazy Loading]
     A --> E[Image Optimization]
-    
+
     B --> F[Cache Invalidation]
     C --> G[Infinite Scroll]
     D --> H[Suspense]
@@ -169,7 +169,7 @@ graph TD
     A[Security Layer] --> B[Input Validation]
     A --> C[Role-Based Access]
     A --> D[API Authentication]
-    
+
     B --> E[XSS Prevention]
     C --> F[Permission Check]
     D --> G[Token Validation]
@@ -178,6 +178,7 @@ graph TD
 ## API Endpoints
 
 ### Product Routes
+
 - `GET /api/products` - List products
 - `POST /api/products` - Create product
 - `PUT /api/products/:id` - Update product
@@ -191,7 +192,7 @@ graph TD
     A[Input Data] --> B{Validation Rules}
     B -->|Valid| C[Process Data]
     B -->|Invalid| D[Error Response]
-    
+
     C --> E[Success Response]
     D --> F[Error Handling]
 ```
@@ -203,13 +204,13 @@ graph TD
     A[Test Suite] --> B[Unit Tests]
     A --> C[Integration Tests]
     A --> D[E2E Tests]
-    
+
     B --> E[Component Tests]
     B --> F[Utility Tests]
-    
+
     C --> G[API Tests]
     C --> H[State Tests]
-    
+
     D --> I[User Flow Tests]
     D --> J[Performance Tests]
 ```
@@ -225,12 +226,14 @@ graph TD
 ## Future Enhancements
 
 1. **Features**
+
    - Bulk operations
    - Advanced filtering
    - Product variants
    - Inventory tracking
 
 2. **Performance**
+
    - Real-time updates
    - Enhanced caching
    - Search optimization

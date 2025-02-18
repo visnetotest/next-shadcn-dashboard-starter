@@ -3,7 +3,12 @@ import CredentialProvider from 'next-auth/providers/credentials';
 import GoogleProvider from 'next-auth/providers/google';
 import AppleProvider from 'next-auth/providers/apple';
 
+import { authOptions } from './session';
+
 const authConfig = {
+  ...authOptions,
+  useSecureCookies: true,
+  trustHost: true,
   secret: process.env.NEXTAUTH_SECRET,
   providers: [
     AppleProvider({
@@ -63,7 +68,7 @@ const authConfig = {
         httpOnly: true,
         sameSite: 'lax',
         path: '/',
-        secure: process.env.NODE_ENV === 'production'
+        secure: true
       }
     },
     callbackUrl: {
@@ -71,7 +76,7 @@ const authConfig = {
       options: {
         sameSite: 'lax',
         path: '/',
-        secure: process.env.NODE_ENV === 'production'
+        secure: true
       }
     },
     csrfToken: {
@@ -80,7 +85,7 @@ const authConfig = {
         httpOnly: true,
         sameSite: 'lax',
         path: '/',
-        secure: process.env.NODE_ENV === 'production'
+        secure: true
       }
     }
   }

@@ -13,7 +13,16 @@ export async function GET() {
         description: 'API documentation for the DashFlow application'
       },
       components: {
-        schemas: registry.schemas
+        schemas: Object.fromEntries(
+          registry.definitions
+            .map((def) => {
+              if ('type' in def && def.type === 'schema') {
+                return [def.schema.description || 'Schema', def.schema];
+              }
+              return [];
+            })
+            .filter((entry) => entry.length > 0)
+        )
       }
     }
   });

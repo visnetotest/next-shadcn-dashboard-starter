@@ -6,7 +6,7 @@ import { columns } from './product-tables/columns';
 
 type ProductListingPage = {};
 
-export default async function ProductListingPage({}: ProductListingPage) {
+const ProductListingPageComponent = async ({}: ProductListingPage) => {
   // Showcasing the use of search params cache in nested RSCs
   const page = searchParamsCache.get('page');
   const search = searchParamsCache.get('q');
@@ -31,4 +31,6 @@ export default async function ProductListingPage({}: ProductListingPage) {
       totalItems={totalProducts}
     />
   );
-}
+};
+
+export default ProductListingPageComponent;

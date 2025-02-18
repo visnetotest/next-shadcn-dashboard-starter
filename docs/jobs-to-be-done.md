@@ -1,19 +1,22 @@
 # Jobs to be Done Analysis - Next.js Admin Dashboard
 
 ## Overview
+
 This document analyzes the Next.js Admin Dashboard template through the Jobs to be Done (JTBD) framework, identifying the core jobs, outcomes, and scenarios that users aim to accomplish.
 
 ## Core Job Statements
 
 ### Developer Job Statement
-*When I need to build an admin dashboard quickly,
+
+_When I need to build an admin dashboard quickly,
 I want to use a production-ready template with modern features,
-So I can focus on business logic rather than building common dashboard components from scratch.*
+So I can focus on business logic rather than building common dashboard components from scratch._
 
 ### Admin Job Statement
-*When I need to manage my application's resources and monitor performance,
+
+_When I need to manage my application's resources and monitor performance,
 I want an intuitive and feature-rich dashboard interface,
-So I can efficiently handle administrative tasks and make data-driven decisions.*
+So I can efficiently handle administrative tasks and make data-driven decisions._
 
 ## Job Map Hierarchy
 
@@ -21,38 +24,38 @@ So I can efficiently handle administrative tasks and make data-driven decisions.
 graph TD
     A[Next.js Admin Dashboard] --> B[Developer Jobs]
     A --> C[Admin Jobs]
-    
+
     B --> D[Setup & Configuration]
     B --> E[Development]
     B --> F[Customization]
-    
+
     C --> G[Authentication]
     C --> H[Resource Management]
     C --> I[Monitoring]
     C --> J[Task Organization]
-    
+
     D --> D1[Initialize Project]
     D --> D2[Configure Auth]
     D --> D3[Setup Routes]
-    
+
     E --> E1[Build Features]
     E --> E2[Integrate APIs]
     E --> E3[Add Business Logic]
-    
+
     F --> F1[Customize UI]
     F --> F2[Extend Components]
     F --> F3[Add New Features]
-    
+
     G --> G1[Login/Logout]
     G --> G2[Manage Sessions]
-    
+
     H --> H1[Manage Products]
     H --> H2[Handle Users]
     H --> H3[Update Settings]
-    
+
     I --> I1[View Analytics]
     I --> I2[Track Metrics]
-    
+
     J --> J1[Organize Tasks]
     J --> J2[Track Progress]
 ```
@@ -78,6 +81,7 @@ journey
 ```
 
 #### Expected Outcomes
+
 1. Reduced development time
 2. Production-ready features available
 3. Modern tech stack implementation
@@ -100,6 +104,7 @@ journey
 ```
 
 #### Expected Outcomes
+
 1. Efficient resource management
 2. Clear performance insights
 3. Organized task tracking
@@ -109,6 +114,7 @@ journey
 ## Feature Analysis Through JTBD Lens
 
 ### Authentication System
+
 ```mermaid
 graph LR
     A[Job: Secure Access] --> B[Multiple Auth Options]
@@ -120,6 +126,7 @@ graph LR
 ```
 
 ### Dashboard Analytics
+
 ```mermaid
 graph LR
     A[Job: Monitor Performance] --> B[Real-time Metrics]
@@ -130,6 +137,7 @@ graph LR
 ```
 
 ### Product Management
+
 ```mermaid
 graph LR
     A[Job: Manage Resources] --> B[Product Listing]
@@ -140,6 +148,7 @@ graph LR
 ```
 
 ### Kanban Board
+
 ```mermaid
 graph LR
     A[Job: Organize Tasks] --> B[Task Management]
@@ -151,13 +160,14 @@ graph LR
 
 ## Job-Feature Matrix
 
-| Job to be Done | Key Features | Success Metrics |
-|----------------|--------------|------------------|
-| Quick Project Setup | Project Structure, Pre-built Components | Setup Time < 1 hour |
-| Secure Authentication | Multiple Auth Providers, Protected Routes | Zero Security Breaches |
-| Resource Management | CRUD Operations, Search & Filter | Task Completion Rate |
-| Performance Monitoring | Real-time Analytics, KPI Tracking | Data Accuracy |
-| Task Organization | Kanban Board, Progress Tracking | Project Completion Rate |
+| Job to be Done         | Key Features                              | Success Metrics         |
+| ---------------------- | ----------------------------------------- | ----------------------- |
+| Quick Project Setup    | Project Structure, Pre-built Components   | Setup Time < 1 hour     |
+| Secure Authentication  | Multiple Auth Providers, Protected Routes | Zero Security Breaches  |
+| Resource Management    | CRUD Operations, Search & Filter          | Task Completion Rate    |
+| Performance Monitoring | Real-time Analytics, KPI Tracking         | Data Accuracy           |
+| Task Organization      | Kanban Board, Progress Tracking           | Project Completion Rate |
 
 ## Conclusion
+
 The Next.js Admin Dashboard successfully addresses the core jobs to be done for both developers and administrators. By providing a comprehensive set of features and an intuitive interface, it enables efficient development and management of administrative tasks while maintaining flexibility for customization and scalability.

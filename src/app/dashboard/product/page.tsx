@@ -49,6 +49,7 @@ export default async function Page(props: pageProps) {
           key={key}
           fallback={<DataTableSkeleton columnCount={5} rowCount={10} />}
         >
+          {/* @ts-expect-error Async Server Component */}
           <ProductListingPage />
         </Suspense>
       </div>
