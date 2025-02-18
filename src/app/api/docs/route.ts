@@ -15,13 +15,8 @@ export async function GET() {
       components: {
         schemas: Object.fromEntries(
           registry.definitions
-            .map((def) => {
-              if ('type' in def && def.type === 'schema') {
-                return [def.schema.description || 'Schema', def.schema];
-              }
-              return [];
-            })
-            .filter((entry) => entry.length > 0)
+            .filter((def) => def.type === 'schema')
+            .map((def) => [def.name, def])
         )
       }
     }

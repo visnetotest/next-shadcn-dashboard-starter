@@ -115,7 +115,6 @@ export default function UserAuthForm() {
       </div>
       <div className='flex flex-col space-y-2'>
         <GoogleSignInButton />
-        <AppleSignInButton />
       </div>
     </>
   );
